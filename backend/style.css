@@ -93,32 +93,7 @@ nav ul li a {
   font-weight: 500;
   transition: 0.3s;
 }
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
 
-@media (max-width: 768px) {
-  #navLinks {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: #111;
-    width: 100%;
-    flex-direction: column;
-    text-align: center;
-    display: none;
-  }
-
-  #navLinks li {
-    margin: 15px 0;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
 
 nav ul li a:hover {
   color: #38bdf8;

@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="description" content="Anurag Kumar – BCA Student & Aspiring Software Developer skilled in HTML, CSS, JavaScript, Python, Node.js and MongoDB.">
+<meta name="keywords" content="Anurag Kumar, Portfolio, Web Developer, BCA Student, HTML, CSS, JavaScript, Python">
 
 </head>
 <body>
@@ -34,6 +37,10 @@
       <i class="fa-brands fa-github"></i>
     </a>
   </div>
+
+
+
+</div>
 </nav>
 
 
@@ -82,7 +89,7 @@
             <button>HTML</button>
             <button>CSS</button>
             <button>C</button>
-            <button>My SQL</button>
+            <button>MySQL</button>
             <button>MongoDB</button>
             <button>Git & GitHub</button>
         </div>
@@ -156,7 +163,7 @@
 
         <!-- Left Side Content -->
         <div class="resume-info">
-            <h3>Anurag kumar</h3>
+            <h3>Anurag Kumar</h3>
             <p>Passionate Web Developer & BCA Student with strong interest in building responsive and user-friendly applications.</p>
 
             <ul class="resume-highlights">
@@ -188,7 +195,7 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <form id="contactForm">
+       <form id="contactForm">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
@@ -201,6 +208,19 @@
         <p>© 2026 Anuragkumar | All Rights Reserved</p>
     </footer>
 
-    <script src="script.js"></script>
+   <!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("5R8YwYkRw-ADsgabl");
+})();
+</script>
+
+<!-- Your JS -->
+
+
+
+<script src="script.js"></script>
 </body>
 </html>

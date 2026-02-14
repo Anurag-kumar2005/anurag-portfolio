@@ -1,24 +1,22 @@
-document.getElementById("contactForm").addEventListener("submit", async function(e) {
+document.addEventListener("DOMContentLoaded", function () {
+
+  const contactForm = document.getElementById("contactForm");
+  const msg = document.getElementById("formMsg");
+
+  contactForm.addEventListener("submit", function(e){
     e.preventDefault();
 
-    const data = {
-        name: this.name.value,
-        email: this.email.value,
-        message: this.message.value
-    };
-
-    const response = await fetch("/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
+    emailjs.sendForm(
+      "service_s2gofeq",
+      "template_32ddp9f",
+      this
+    ).then(() => {
+      msg.innerHTML = "Message sent successfully!";
+      contactForm.reset();
+    }).catch((error) => {
+      console.log(error);
+      msg.innerHTML = "Failed to send message.";
     });
-    function toggleMenu() {
-  const nav = document.getElementById("navLinks");
-  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-}
+  });
 
-    const result = await response.text();
-    document.getElementById("formMsg").innerText = result;
-
-    this.reset();
 });
